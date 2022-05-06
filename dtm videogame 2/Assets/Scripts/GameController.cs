@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
         if (score > 100f)
         {
             youWin.gameObject.SetActive(true);
-            isGameActive = false;
+            isGameActive = true;
         }
 
     }
@@ -32,9 +32,5 @@ public class GameController : MonoBehaviour
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
         Debug.Log(score);
-    }
-    void OnCollisionEnter2D(Collision2D other)
-    {
-
     }
 }
