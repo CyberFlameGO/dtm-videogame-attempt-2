@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
         if (score > 100f)
         {
             youWin.gameObject.SetActive(true);
-            isGameActive = false;
+            isGameActive = true;
         }
 
     }
