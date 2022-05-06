@@ -15,7 +15,7 @@ public class DetectCollisons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -24,12 +24,12 @@ public class DetectCollisons : MonoBehaviour
         // it also runs the UpdateScore function and adds 5 to your score
         // parameters - monsters and pizza
         // return value - "it works", +5 to your score
-        if (gameObject.tag == "Monsters" && other.gameObject.tag == "Pizza") 
+        if (gameObject.tag == "Monsters" && other.gameObject.tag == "Pizza")
         {
             Destroy(gameObject);
             Debug.Log("it works");
             gameManager.UpdateScore(5);
-            
+
         }
     }
 }
