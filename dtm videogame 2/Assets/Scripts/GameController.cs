@@ -16,18 +16,18 @@ public class GameController : MonoBehaviour
     {
         score = 0;
         UpdateScore(0);
-        isGameActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (score > 100f)
+        Debug.Log(transform.position.y);
+        if (score >= 100)
         {
             youWin.gameObject.SetActive(true);
-            isGameActive = true;
+            isGameActive = false;
         }
-        if (transform.position.y < -5)
+        if (transform.position.y > -5)
         {
             isGameActive = false;
             youLose.gameObject.SetActive(true);
